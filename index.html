@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Chat App</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/navbar.css" rel="stylesheet">
+	
+	<link href="css/client.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="node_modules/socket.io/node_modules/socket.io-client/dist/socket.io.js"></script>
+  <script src="js/jquery.watermark.min.js"></script>
+  <script src="js/client.js"></script>
+  </head>
+
+  <body>
+<div class="container">
+
+      <!-- Static navbar -->
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Chase Walker ChatRoom</a>
+          </div>
+        </div><!--/.container-fluid -->
+      </div>
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title" id="rooms">
+	Loading Rooms...
+	</h3>
+  </div>
+  <div id="messageBody">
+  </div>
+  <span class='padding-5 margin-5'>Currently Active Users</span>
+  <div id='userList'>
+  </div>
+  <div id="sendMessageDiv" style="display:none;" class="sendMessage">
+<textarea rows='8' cols="50" id="outgoing-message" name="outgoing-message" autofocus="autofocus"></textarea>
+<br/><br/>
+      <button type="button" id="send" name="send" value="send" class="btn btn-success">Send</button>
+	  <button type="button" id="privateMessages" name="privateMessages" class="btn btn-info pull-right" data-toggle="modal" data-target="#pmModal">Private Messages <span class="badge" id="privateMessageNumber">0</span></button>
+	  <br/>
+	  <br/>
+	  </div>
+    <div id="usernameEntry">
+      Please enter your username to continue:&nbsp; <br/>
+      <input type="username" id="username" name="username" />
+	  <br/>
+	  <br/>
+      <button type="button" id="change" name="change" value="change" class="btn btn-success">Submit</button>
+    </div>
+	
+</div>
+
+      </div>
+
+    </div> <!-- /container -->
+	<div class="modal fade" id="pmModal" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Private Messages</h4>
+      </div>
+      <div class="modal-body" >
+        <p id="introMessage">Click on a user's name to send them a message.</p>
+		<div id='userListModal'>
+  </div>
+  <div id="modalMessages"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="closeModal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+  </body>
+</html>

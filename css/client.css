@@ -1,0 +1,93 @@
+#pre-connect{
+  color:lightgray;
+  font-style:italic;
+}
+
+#title{
+  color:blue;
+}
+
+.badge-inactive{
+background-color: green;
+}
+
+#messages{
+  border:1px solid lightgray;
+  border-radius:5px;
+  margin:10px;
+  padding:10px;
+  height: 300px;
+  width:auto;
+  overflow-y: scroll;
+}
+
+div.messages{
+  border:1px solid lightgray;
+  border-radius:5px;
+  margin:10px;
+  padding:10px;
+  height: 300px;
+  width:auto;
+  overflow-y: scroll;
+}
+
+.sendMessage{
+  margin:5px;
+  padding:5px;
+}
+
+.padding-5{
+  padding:5px;
+}
+
+.displaynone{
+ display:none;
+}
+
+.margin-5{
+  margin:5px;
+}
+
+#usernameEntry{
+  margin:5px;
+  padding:5px;
+}
+
+#userList{
+  border:1px solid lightgray;
+  border-radius:5px;
+  margin:10px;
+  padding:10px;
+  height: 70px;
+  width:auto;
+  overflow-y: scroll;
+}
+
+.privateMessageWindowSize {
+	border:1px solid lightgray;
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+	height: 200px;
+	width:auto;
+	overflow-y: scroll;
+}
+
+div.in-message{
+  font-size:11pt;
+  color:blue;
+}
+
+div.out-message{
+  font-size:11pt;
+  color:green;
+}
+
+div.info-message{
+  font-size:11pt;
+  color:red;
+}
+
+div.panel{
+  margin:8px;
+}
